@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>starbucks</h1>
+    <ul><h2>coffee</h2>
+        <img src="iceA.jpeg" width=15%>
+        <input type="checkbox" name="drink" value="iceAmerciano"/> 아이스아메리카노 3000원
+        <img src="latte.jpeg" width=35%>
+        <input type="checkbox" name="drink" value="latte"/> 카페라떼 4000원
+        <img src="mocha.jpeg" width=26%>
+        <input type="checkbox" name="drink" value="mocha"/> 카페모카 4500원
+    </ul>
+    <ul><h2>drink</h2>
+        <img src="malcha.jpeg" width=30%>
+        <input type="checkbox" name="drink" value="malcha"/> 말차라떼 4500원
+        <img src="strawberry.png" width=30%>
+        <input type="checkbox" name="drink" value="strawberry"/> 딸기드링크 5000원
+    </ul>
+    <button type="button" onclick="location.href='order.html';">결제하기</button>
+    
+    <button onclick="order()">결제내역</button>
+    <script>
+        function order() {
+            var obj=document.getElementsByName("drink").length;
+
+            for(var i=0; i<obj; i++) {
+                if(document.getElementsByName("drink")[i].checked == true) {
+                    alert(document.getElementsByName("drink")[i].value+"1잔");
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
